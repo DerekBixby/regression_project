@@ -64,13 +64,13 @@ The following dictionary only defines columns used in analysis for this dataset.
 
 # Takeaways and Conclusions
 
-* Higher monthly charges seem to be a driver of churn
-* Customers with automatic billing seem to churn at a lower rate than those who pay manually
-* The longer the contract, the less likely a customer will churn
-* Having dependents does seem to affect churn, indicating that nor only financial factors can be good predictors
+* Tax Amount is the variable most closely correlated with Value
+* A number of variables are interrelated, particularly bathrooms, bedrooms, and square footage
+* Differences in average value between counties require examination of multiple variables
+* Polynomial is best performing model
 
 
 # Recommendations
 
-* Focus on incentivising long term contracts with customers
-* Push family plans to draw in those with dependents
+* Focus any future models around tax value
+* Focus on selling on Orange County
