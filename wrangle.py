@@ -1,3 +1,8 @@
+import os
+import pandas as pd
+from env import get_db_url
+from sklearn.model_selection import train_test_split
+
 def new_zillow_data():
     '''
     This reads the zillow data from the Codeup db into a df
@@ -31,6 +36,8 @@ def get_zillow_data():
         df.to_csv('zillow.csv')
         
     return df
+
+
 
 def split_data(df, test_size=.2, validate_size=.25, col_to_stratify=None, random_state=None):
     '''
@@ -70,15 +77,13 @@ def wrangle_zillow():
     
     df = df.dropna()
 
+    # converts fips to object for encoding
+
+    df['fips'] = df['fips'].astype(object)
+
+    # creates dummy variables for fips categorical
+
+    dummy_df = pd.get_dummies(df[['fips']], drop_first=True)
+    df = pd.concat([df, dummy_df], axis=1)
+
     return df
-
-def minmax_scaler(train, validate, test):
-    scaler_minmax = sklearn.preprocessing.MinMaxScaler()
-
-    scaler_minmax.fit(x_train)
-
-    x_train_scaled_minmax = scaler_minmax.transform(x_train)
-    x_validate_scaled_minmax = scaler_minmax.transform(x_validate)
-    x_test_scaled_minmax = scaler_minmax.transform(x_test)
-    
-    return x_train_scaled_minmax, x_validate_scaled_minmax, x_test_scaled_minmax
