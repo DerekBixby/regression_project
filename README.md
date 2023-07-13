@@ -28,10 +28,10 @@ My initial hypothesis states that primary drivers of property value will be prev
 
 * Explore data for variables driving value
   * Answer the following initial questions:
-      * Why drives differences in value between nearby properties?
-      * Why do properties with similar attributes differ in value between locations?
+      * What is the variable most strongly correlated with property value?
+      * How closely are the variables potentially affecting value related to each other?
       * How does number of bathrooms or bedrooms affect property value?
-      * How directly are square footage and value related?
+      * What drives differences in value between counties?
 
 * Develop a model to predict property value
   * Use variables identified as drivers to build predictive models
@@ -51,6 +51,7 @@ The following dictionary only defines columns used in analysis for this dataset.
 |Square Feet| Total square footage of property|
 |Bedrooms| Number of bedrooms|
 |Bathrooms| Number of bathrooms. Partial means no washing facility, only toilet|
+|FIPS| Federal Information Processing Standards, categorical variable of county codes for above counties|
 
 # Reproduction Instructions
 
