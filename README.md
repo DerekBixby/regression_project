@@ -74,3 +74,4 @@ The following dictionary only defines columns used in analysis for this dataset.
 
 * Focus any future models around tax value
 * Focus on selling on Orange County
+* Eliminate some outliers
